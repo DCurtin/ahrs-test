@@ -1,13 +1,18 @@
 import Tkinter as tk 
 import RPi.GPIO as GPIO
+import smbus
 from time import sleep
 
-GPIO21 = 21
-GPIO20 = 20
+DEVICE_BUS = 1
+DEVICE_ADDR_1 = 0x68
+DEVICE_ADDR_2 = 0x76 
 
-GPIO.setmode(GPIO.BCM)
-GPIO.setup(GPIO21, GPIO.OUT)
-GPIO.setup(GPIO20, GPIO.OUT)
+#GPIO21 = 21
+#GPIO20 = 20
+
+#GPIO.setmode(GPIO.BCM)
+#GPIO.setup(GPIO21, GPIO.OUT)
+#GPIO.setup(GPIO20, GPIO.OUT)
 
 master = tk.Tk()
 master.title("GPIO Control")

@@ -1,6 +1,6 @@
-import utime
 from machine import I2C, Pin
 from mpu9250 import MPU9250
+from time import sleep
 
 i2c = I2C(scl=Pin(22), sda=Pin(21))
 sensor = MPU9250(i2c)
@@ -13,4 +13,4 @@ while True:
     print(sensor.magnetic)
     print(sensor.temperature)
 
-    utime.sleep_ms(1000)
+    sleep(2)
